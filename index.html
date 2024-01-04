@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			http-equiv="Cache-Control"
+			content="max-age=31557600, must-revalidate"
+		/>
+		<meta name="language" content="en" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Construction management software" />
+		<meta
+			name="keywords"
+			content="Construction management, Building management, Project manager"
+		/>
+
+		<link rel="icon" type="image/svg" href="images/logo.svg" />
+		<title>JOT Solutions</title>
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+		<!-- Swiper css -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+		<!-- Tailwind css -->
+		<!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="tailwind.config.js"></script>
+		<style>
+			.header-article {
+				background-image: url(images/back-logo.png);
+				background-repeat: no-repeat;
+				background-position: right top 55px;
+				background-size: 66% auto;
+			}
+			@media screen and (min-width: 544px) {
+				.header-article {
+					background-size: 60% auto;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				.header-article {
+					background-position: right top 64px;
+					background-size: 50% auto;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				.header-article{
+					background-position: right bottom;
+					background-size: auto calc(100% - 64px);
+				}
+				.jot-app_info-block{
+					grid-template-columns: 1fr;
+				}
+			}
+			@media (min-width: 1280px) {
+				.jot-app_info-block{
+					grid-template-columns: 540px 1fr;
+				}
+			}
+			.seeMoreButton path{
+				transition: 0.3s;
+			}
+			.seeMoreButton:hover * {
+				stroke: #fff !important;
+			}
+		</style>
+		
+	</head>
+	<body
+		class="font-latoFont text-secondaryColor dark:text-darkSecondaryColor dark:bg-darkBackgroundColor bg-backgroundColor"
+	>
+		<!-- Laptop Navigation bar BLOCK -->
+		<nav
+			class="fixed top-0 z-[9997] px-[60px] py-[13px] px-3 w-screen h-[64px] md:flex hidden flex-row items-center rounded-b-[20px] bg-[#EEF1F8CC] dark:bg-darkBackgroundColor2"
+			style="backdrop-filter: saturate(100%) blur(5px)"
+		>
+			<a href="#">
+				<img
+					src="images/Logo_header.svg"
+					alt="logo"
+					class="dark:p-2 h-[42px] dark:h-[45px] dark:rounded-md dark:bg-darkSecondaryColor"
+				/>
+			</a>
+			<ul
+				class="font-baseFont font-medium des:ml-20 lg:ml-16 mdlg:ml-8 ml-4 h-full flex flex-row xl:gap-[40px] gap-4 xl:text-[18px] lg:text-[1.05em] text-[.9em] dark:text-darkSecondaryColor"
+			>
+				<li class="flex items-center transition duration-200">
+					<a
+						href="#"
+						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300 text-primaryColor font-bold"
+						>About us</a
+					>
+				<li class="flex items-center text-s transition duration-200">
+					<a
+						href="support.html"
+						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+						>Support</a
+					>
+				</li>
+				<li class="flex items-center text-s transition duration-200">
+					<a
+						href="contacts.html"
+						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+						>Contacts</a
+					>
+				</li>
+			</ul>
+			<div
+				class="auth-group relative flex flex-row items-center justify-end lg:gap-4 mdlg:gap-3 gap-2 flex-1 des:mr-10 mr-2 xl:text-xl lg:text-[1.05em] text-[.9em]"
+			>
+				<span
+					class="hidden block p-1 px-3 shadow-newButtonShadow dark:shadow-darkShadow lg:text-xl text-lg rounded-full text-secondaryColor dark:text-darkSecondaryColor font-bold cursor-pointer"
+					onclick="switchTheme()"
+				>
+					<i class="fa-solid fa-moon"></i>
+				</span>
+				<a
+					href="#"
+					class="w-[151px] h-[43px] flex justify-center items-center font-semibold text-white text-[18px] text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300 font-baseFont"
+					style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
+				>
+					Log in
+				</a>
+				<a
+					href="#"
+					class="w-[151px] h-[43px] flex justify-center items-center font-semibold text-[18px] text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300 font-baseFont"
+				>
+					Sign up
+				</a>
+			</div>
+		</nav>
+		<!-- Mobile Navigation bar BLOCK -->
+		<nav class="fixed py-[10px] px-[16px] xxs:h-[75px] h-[55px] w-full md:hidden flex justify-center rounded-b-[20px] z-[9998]"
+			style="backdrop-filter: saturate(100%) blur(5px)"
+		>
+			<div class="burger-menu absolute top-1/2 -translate-y-1/2 left-[16px] bg-backgroundColor xxs:w-[45px] w-[35px] xxs:h-[45px] h-[35px] flex items-center justify-center rounded-[10px] shadow-newButtonShadowSmallest z-[9999]"
+				onclick="openMenu()"
+			>
+				<img src="images/burger.svg" alt="" class="xxs:w-[25px]">
+			</div>
+			
+			<div class="logo flex items-center z-[9993]">
+				<img src="images/mobile header logo.svg" alt="" class="xxs:w-[75px]">
+			</div>
+
+		</nav>
+		<!-- Mobile navigation bar BLOCK -->
+		<div
+			class="mobileMenu fixed top-0 left-0 right-0 bottom-0 pt-[100px] z-[9997] bg-backgroundColor transition flex flex-col items-center duration-500"
+			style="opacity: 0; pointer-events: none"
+		>
+			<ul class="mb-[50px] flex flex-col gap-y-[30px] text-[18px] font-medium font-baseFont text-secondaryColor">
+				<li><a href="index.html" class="font-bold text-primaryColor">About us</a></li>
+				<li><a href="support.html">Support</a></li>
+				<li><a href="contacts.html">Contacts</a></li>
+			</ul>
+			<div>
+				<a
+					href="#"
+					class="mb-[15px] font-baseFont py-2 w-[130px] h-[35px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[18px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+					style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
+				>
+					Log in
+				</a>
+				<a
+					href="#"
+					class="py-2 w-[130px] h-[35px] flex justify-center items-center text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold text-[18px] transition duration-300 font-baseFont"
+				>
+					Sign up
+				</a>
+			</div>
+		</div>
+		<!-- MAIN CONTENT -->
+		<div
+			class="mx-auto min-h-screen des:w-max des:max-w-none xl:max-w-[1440px] lg:max-w-[1200px] w-full bg-backgroundColor dark:bg-darkBackgroundColor"
+		>
+			<!-- Header BLOCK-->
+			<article class="header-article md:pt-[64px] pt-[55px] pb-[20px]" >
+				<header class="md:mx-[60px] mx-[16px] md:py-5 flex flex-row items-center ">
+					<h2
+						class="md:mt-[70px] mt-[20px] mdlg:text-[64px] xxs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
+					>
+						<span class="text-goldenColor dark:text-darkPrimaryColor font-semibold "
+							>J.O.T</span
+						>
+						Solutions
+					</h2>
+				</header>
+				<article class="md:mx-[60px] mx-4 pb-[20px] max-w-[700px]">
+					<h2
+						class="md:mt-[40px] mt-[30px] text-primaryColor dark:text-darkPrimaryColor xs:text-[40px] xxs:text-[35px] text-[24px] font-bold font-baseFont"
+					>
+						Corporate Strategy Management
+					</h2>
+					<p
+						class="xs:mt-[50px] mt-[15px] md:mb-8 mb-2 xs:text-[28px] xxs:text-[20px] text-[16px] text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
+					>
+						JOT (Just On Time) is a boutique firm for strategy and project
+						management that combines various management solutions for
+						companies under one roof.
+					</p>
+					<div
+						class="auth-group mt-[30px] flex md:flex-row flex-col justify-start xs:items-center flex-1 md:gap-[20px] gap-3 text-base"
+					>
+						<a
+							href="#"
+							class="font-baseFont py-2 xxs:w-[250px] w-[220px] xxs:h-[50px] h-[40px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl xs:text-[22px] text-[18px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+							style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
+						>
+							Log in
+						</a>
+						<a
+							href="#"
+							class="py-2 xxs:w-[250px] w-[220px] xxs:h-[50px] h-[40px] flex justify-center items-center text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold xs:text-[22px] text-[18px] transition duration-300 font-baseFont"
+						>
+							Sign up
+						</a>
+					</div>
+				</article>
+			</article>
+			<!-- JOT APP info BLOCK -->
+			<article 
+				class="jot-app_info-block relative grid py-5 md:mt-[150px] mt-[20px] md:mx-[60px] mx-4 xl:gap-x-[84px] gap-x-[40px] mb-none"
+			>
+				<div 
+					class="justify-self-center xl:mt-0 mt-[20px] md:mb-0 mb-[20px] img-wrapper xl:row-start-1 md:row-start-5 row-start-1 xl:row-end-5 md:row-end-6 row-end-2 md:w-[536px] md:h-[419px] rounded-[15px] p-[20px] shadow-newButtonShadow"
+				>
+					<img src="images/about_jot_app.png" alt="teams" class="rounded-[15px]">
+				</div>
+				<h2
+					class="mb-[50px] xl:w-auto w-full text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-[40px] xxs:text-[35px] text-[24px] font-bold font-baseFont"
+				>
+					ABOUT JOT APP
+				</h2>
+				<p
+					class="text-secondaryColor dark:text-darkSecondaryColor xs:text-2xl xxs:text-[20px] text-[16px] font-medium text-justify"
+				>
+					JOT is a project management platform that allows you to focus on
+					your real purpose and work, saving you time and energy.
+				</p>
+				<p
+					class="my-5 text-secondaryColor dark:text-darkSecondaryColor xs:text-2xl xxs:text-[20px] text-[16px] font-medium text-justify"
+				>
+					Whether you have prior experience in team management or not, the JOT kit is designed to support our methodology, ensuring that each project is managed correctly and efficiently. It helps to achieve the company's goals and objectives while enabling complete control and supervision from anywhere, at any time of the day.
+				</p>
+				<a
+					href="contacts.html"
+					class="font-baseFont py-2 xxs:w-[250px] w-[220px] xxs:h-[50px] h-[40px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+					>Scheduling demo</a
+				>
+			</article>
+			<!-- BENEFITS BLOCK -->
+			<article class="relative py-5 lg:mx-2 md:mx-22 mx-4 lg:mt-[150px] mt-[40px] mx-none">
+				<h2
+					class="lg:mb-[170px] mb-4 text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-[40px] xxs:text-[35px] text-[24px] font-bold text-center uppercase font-baseFont"
+				>
+					Benefits of using our program
+				</h2>
+				<div
+					class="slider group lg:flex hidden gap-4 lg:gap-none items-center w-full relative min-h-[250px]"
+					id="sliderTemp"
+				>
+					<div
+						class="slider-card slider-card--0 card lg:absolute flex justify-center items-center lg:left-0 px-[16px] py-[32px] w-[333px] h-[333px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-200 ease-in-out"
+						onclick="swiperTempChange(0)"
+						style="transition: 1s"
+					>
+						<div class="content flex flex-col justify-center">
+							<img src="images/benefits-swiper-images/Vector1.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
+								<h3
+									class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+								>
+									Flexibility and Scalability:
+								</h3>
+								<p class="mt-[20px] text-[16px] leading-[22.4px] font-normal">
+									Make sure it is alongside
+								</p>
+						</div>
+					</div>
+					<div
+						class="slider-card slider-card--1 card lg:absolute flex justify-center px-[16px] py-[32px] w-[333px] h-[333px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-200 ease-in-out"
+						onclick="swiperTempChange(1)"
+						style="transition: 1s"
+					>
+						<div class="content flex flex-col justify-center">
+							<img src="images/benefits-swiper-images/Vector2.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
+							<h3
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+							>
+								Deadline and Budget Adherence:
+							</h3>
+							<p class="mt-[20px] text-[16px] leading-[22.4px] font-normal">
+								Systematic monitoring and control prevent unforeseen delays and overspending
+							</p>
+						</div>
+					</div>
+					<div
+						class="slider-card slider-card--2 card lg:absolute flex justify-center px-[16px] py-[32px] w-[333px] h-[333px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-200 ease-in-out"
+						onclick="swiperTempChange(2)"
+						style="transition: 1s"
+					>
+						<div class="content flex flex-col justify-center">
+							<img src="images/benefits-swiper-images/Vector3.svg" alt="flexibility" class="vector h-[75px] mb-[45px]">
+							<h3
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+							>
+								Increased Productivity:
+							</h3>
+							<p class="mt-[20px] text-[16px] leading-[22.4px] font-normal">
+								Efficient resource allocation and process automation lead to heightened team and project productivity
+							</p>
+						</div>
+					</div>
+					<div
+						class="slider-card slider-card--3 card lg:absolute flex justify-center px-[16px] py-[32px] w-[333px] h-[333px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-200 ease-in-out"
+						onclick="swiperTempChange(3)"
+						style="transition: 1s"
+					>
+						<div class="content flex flex-col justify-center">
+							<img src="images/benefits-swiper-images/Vector4.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
+							<h3
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+							>
+								Enhanced Quality Results:
+							</h3>
+							<p class="mt-[20px] text-[16px] leading-[22.4px] font-normal">
+								Clear planning and risk management contribute to achieving higher quality and predictable outcomes
+							</p>
+						</div>
+					</div>
+					<div
+						class="slider-card slider-card--4 card lg:absolute flex justify-center px-[16px] py-[32px] w-[333px] h-[333px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-200 ease-in-out"
+						onclick="swiperTempChange(4)"
+						style="transition: 1s"
+					>
+						<div class="content flex flex-col justify-center">
+							<img src="images/benefits-swiper-images/Vector5.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
+							<h3
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+							>
+								Improved Communication:
+							</h3>
+							<p class="mt-[20px] text-[16px] leading-[22.4px] font-normal">
+								Our program facilitates communication across all project participants drastically reducing miscommunication
+							</p>
+						</div>
+						
+					</div>
+				</div>
+				<!-- Mobile version -->
+				<div
+					class="relative w-full min-h-[215px] lg:hidden flex flex-col items-center gap-4 lg:gap-none group"
+				>
+					<div
+						class="card lg:absolute lg:left-0 z-0 hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[180px] h-auto shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
+					>
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor sm:text-2xl text-xl font-semibold"
+						>
+							Increased Productivity:
+						</h3>
+						<p class="mt-2 xs:text-2xl text-xl">
+							Efficient resource allocation and process automation lead
+							to heightened team and project productivity.
+						</p>
+					</div>
+					<div
+						class="card lg:absolute lg:left-1/3 lg:-translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[180px] h-auto shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
+					>
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor sm:text-2xl text-xl font-semibold"
+						>
+							Deadline and Budget Adherence:
+						</h3>
+						<p class="mt-2 xs:text-2xl text-xl">
+							Systematic monitoring and control prevent unforeseen delays
+							and overspending.
+						</p>
+					</div>
+					<div
+						class="card lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-20 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[180px] h-auto shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-90 lg:hover:scale-95 transition duration-200 ease-in-out"
+					>
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor sm:text-2xl text-xl font-semibold"
+						>
+							Enhanced Quality Results:
+						</h3>
+						<p class="mt-2 xs:text-2xl text-xl">
+							Clear planning and risk management contribute to achieving
+							higher quality and predictable outcomes.
+						</p>
+					</div>
+					<div
+						class="card lg:absolute lg:right-1/3 lg:translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[180px] h-auto shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
+					>
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor sm:text-2xl text-xl font-semibold"
+						>
+							Improved Communication:
+						</h3>
+						<p class="mt-2 xs:text-2xl text-xl">
+							Our program facilitates communication across all project participants drastically reducing miscommunication
+						</p>
+					</div>
+					<div
+						class="card lg:absolute lg:right-0 z-0 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[180px] h-auto shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
+					>
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor sm:text-2xl text-xl font-semibold"
+						>
+							Flexibility and Scalability:
+						</h3>
+						<p class="mt-2 xs:text-2xl text-xl">
+							Make sure it is alongside
+						</p>
+					</div>
+				</div>
+				<!-- <a
+					href="#"
+					class="mt-10 mb-14 mx-auto py-2 max-w-[250px] block text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-dark dark:hover:text-darkBackgroundColor2 transition duration-300"
+				>
+					See more
+				</a> -->
+			</article>
+			<!-- TEXT BLOCK -->
+			<article class="relative lg:mx-[60px] md:mx-22 mx-4 md:mt-[200px] mt-[40px] mb-[100px] mx-none">
+				<p class="font-medium xs:text-[24px] text-[20px] leading-[33.6px]">
+					We can assist you in organizing the construction process more efficiently. Once all parties agree on the process, we ensure that you receive the expected results within the agreed time frame. Our service helps you to plan, monitor, and control everything that is happening at the construction site by organizing the workflow and communications. We are committed to ensuring that construction customers are satisfied with the results of the contractors' work.	
+				</p>
+			</article>
+			<!-- Info cards BLOCK -->
+			<article
+				class="py-5 mdlg:mx-[60px] md:mx-[100px] mx-4 grid mdlg:grid-cols-2 grid-cols-1 gap-[24px] flex-wrap items-center justify-center text-secondaryColor dark:text-darkSecondaryColor"
+			>
+				<div
+					class="relative lg:h-[370px] h-full w-full rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 xxs:p-[45px] p-[20px]"
+				>
+					<h3
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
+					>
+						Project Management
+					</h3>
+					<p class="des:text-[22px] text-lg mt-[50px] des:mb-8 font-medium">
+						Project Management: The platform allows you to create
+						projects, tasks, plans, schedules and budgets, as well as
+						tracking the implementation of projects and analyze data
+						obtained from them .
+					</p>
+					<a
+						href="#"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto mt-10 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+					>
+						<span>See more</span>
+						<span class="icon">
+							<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.05029 11.4493L10.2427 2.25691M2.46451 1.5498H9.94979C10.5021 1.5498 10.9498 1.99752 10.9498 2.5498V10.0351" stroke="#42C1EE" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</span>
+					</a>
+					<!-- <a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
+						<span class="font-baseFont text-[22px]">See more</span>
+						<img src="images/arrow-up-right.svg" alt="">
+					</a> -->
+				</div>
+				<div
+					class="relative lg:h-[370px] h-full w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 xxs:p-[45px] p-[20px]"
+				>
+					<h3
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont leading-[52px]"
+					>
+						Task and outsourcing Management
+					</h3>
+					<p class="des:text-[22px] text-lg mt-[40px] des:mb-8 font-medium">
+						The platform allows to optimize your own resources, assign
+						tasks, and monitors task completion.
+					</p>
+					<a
+						href="#"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto mt-10 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+					>
+						<span>See more</span>
+						<span class="icon">
+							<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.05029 11.4493L10.2427 2.25691M2.46451 1.5498H9.94979C10.5021 1.5498 10.9498 1.99752 10.9498 2.5498V10.0351" stroke="#42C1EE" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</span>
+					</a>
+					<!-- <a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
+						<span class="font-baseFont text-[22px]">See more</span>
+						<img src="images/arrow-up-right.svg" alt="">
+					</a> -->
+				</div>
+				<div
+					class="relative lg:h-[370px] h-full w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 xxs:p-[45px] p-[20px]"
+				>
+					<h3
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
+					>
+						Analytics and Reporting
+					</h3>
+					<p class="des:text-[22px] text-lg mt-[40px] des:mb-8 font-medium">
+						The platform provides project analysis and reporting
+						capabilities, including data on cost, performance, quality,
+						and more.
+					</p>
+					<a
+						href="#"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto mt-10 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+					>
+						<span>See more</span>
+						<span class="icon">
+							<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.05029 11.4493L10.2427 2.25691M2.46451 1.5498H9.94979C10.5021 1.5498 10.9498 1.99752 10.9498 2.5498V10.0351" stroke="#42C1EE" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</span>
+					</a>
+					<!-- <a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
+						<span class="font-baseFont text-[22px]">See more</span>
+						<img src="images/arrow-up-right.svg" alt="">
+					</a> -->
+				</div>
+				<div
+					class="relative lg:h-[370px] h-full w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow xxs:p-[45px] p-[20px] hover:newButtonShadowSmaller-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200"
+				>
+					<h3
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
+					>
+						READY TO GET STARTED?
+					</h3>
+					<p class="des:text-[22px] text-lg mt-[40px] mb-8 font-medium">
+						Manage your projects: Labor, resources, and financials; all in one cloud-based solution for developers and builders
+					</p>
+					<a
+						href="contacts.html"
+						class="font-baseFont block lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto py-2 mt-10 ml-auto bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-[22px] transition duration-300 shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
+					>
+						Contact us
+					</a>
+				</div>
+			</article>
+			<!-- JOT APP slider BLOCK -->
+			<article class="sm:mt-[150px] mt-[40px] pb-5 sm:mx-[60px] mx-4 text-secondaryColor dark:text-darkSecondaryColor">
+				<h2
+					class="font-baseFont text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-[40px] xxs:text-[35px] text-[24px] font-bold text-center uppercase lg:mb-[50px] mb-6"
+				>
+					Jot app
+				</h2>
+				
+				<div class="jot-app-wrapper p-[10px] m-[-10px] transition-all duration-300"
+					style="
+							height: 900px; 
+							overflow: hidden;
+					"
+				>
+					<div class="lg:grid flex flex-col items-center lg:grid-cols-10 gap-[24px] ">
+
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] lg:w-auto shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer lg:col-start-1 xl:col-end-5 lg:col-end-6 " onclick="jotAppOpenPopup(0)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">Team managment</h3>
+							<img src="images/small/Team managment small.png" alt="Team managment" class="w-full xl:block hidden">
+							<img src="images/big/Team managment big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer xl:col-start-5 lg:col-start-6 lg:col-end-11" onclick="jotAppOpenPopup(1)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">Kanban</h3>
+							<img src="images/small/Kanban small.png" alt="Kanban" class="w-full xl:block hidden">
+							<img src="images/big/Kanban big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer lg:col-start-1 xl:col-end-7 lg:col-end-6" onclick="jotAppOpenPopup(2)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">Daily reports</h3>
+							<img src="images/small/Daily reports small.png" alt="Daily reports" class="w-full xl:block hidden">
+							<img src="images/big/Daily reports big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer xl:col-start-7 lg:col-start-6 lg:col-end-11" onclick="jotAppOpenPopup(3)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">Decision summary</h3>
+							<img src="images/small/Decision summary small.png" alt="Decision summary" class="w-full xl:block hidden">
+							<img src="images/big/Decision summary big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+						
+
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer col-start-1 xl:col-end-5 col-end-6" onclick="jotAppOpenPopup(4)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">WBS</h3>
+							<img src="images/small/WBS small.png" alt="WBS" class="w-full xl:block hidden">
+							<img src="images/big/WBS big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer xl:col-start-5 col-start-6 col-end-11" onclick="jotAppOpenPopup(5)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">Dashboard</h3>
+							<img src="images/small/Dashboard small.png" alt="Dashboard" class="w-full xl:block hidden">
+							<img src="images/big/Dashboard big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer col-start-1 xl:col-end-7 col-end-6" onclick="jotAppOpenPopup(6)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">Sprints</h3>
+							<img src="images/small/Sprints small.png" alt="Sprints" class="w-full xl:block hidden">
+							<img src="images/big/Sprints big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+						<div class="card lg:h-[425px] lg:w-full w-auto lg:max-w-none max-w-[600px] shadow-newButtonShadow rounded-[15px] xxs:px-[35px] px-[11px] xxs:py-[30px] py-[7px] cursor-pointer xl:col-start-7 col-start-6 col-end-11" onclick="jotAppOpenPopup(7)">
+							<h3 class="font-semibold font-baseFont text-primaryColor xxs:text-[32px] text-[18px] xxs:mb-[30px] mb-[15px]">Staff</h3>
+							<img src="images/small/Staff small.png" alt="Staff" class="w-full xl:block hidden">
+							<img src="images/big/Staff big.png" alt="Kanban" class="w-full xl:hidden block">
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--0"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(0)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Team managment</h2>
+					<img src="images/big/Team managment big.png" alt="Team managment" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">Our app facilitates seamless collaboration among teams by providing a centralized platform for task assignment, progress tracking, and communication. With customizable team roles and permissions, it ensures efficient project coordination and accountability.</p>
+				</div>
+
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--1"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(1)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Kanban</h2>
+					<img src="images/big/Kanban big.png" alt="Kanban" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A Kanban board is a visual project management tool that helps teams track and manage work in progress, enabling them to visualize tasks, optimize workflows, and enhance collaboration. It organizes tasks into columns representing different stages of the process, providing a clear overview of work status and promoting efficient task prioritization.</p>
+				</div>	
+
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--2"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(2)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Daily reports</h2>
+					<img src="images/big/Daily reports big.png" alt="Daily reports" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">Daily reports are short summaries of a day's activities, progress, and accomplishments, often used in business and project management to keep customers informed about ongoing work. These reports facilitate communication, highlight any challenges or achievements, and provide a clear view of daily operations to support informed decision-making.</p>
+				</div>	
+
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--3"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(3)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Decision summary</h2>
+					<img src="images/big/Decision summary big.png" alt="Decision summary" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A decision summary is a succinct overview that outlines the key choices made during a decision-making process, along with the rationale behind those choices. It serves as a valuable reference document, capturing the essential details of the decision and aiding in communication, accountability, and future analysis</p>
+				</div>
+
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--4"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(4)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">WBS</h2>
+					<img src="images/big/WBS big.png" alt="WBS" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A work breakdown structure (WBS) is a hierarchical decomposition of a project into smaller, manageable components, allowing for a structured and organized approach to project planning and execution. By breaking down the project into discrete tasks or work packages, a WBS helps teams define scope, allocate resources, and track progress more effectively.</p>
+				</div>
+
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--5"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(5)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Dashboard</h2>
+					<img src="images/big/Dashboard big.png" alt="Dashboard" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">The dashboard provides users with a comprehensive overview of their project's key metrics, progress, and upcoming deadlines, all in one centralized location. It empowers users to make informed decisions and prioritize tasks, enhancing their project management efficiency.</p>
+				</div>
+
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--6"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(6)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Sprints</h2>
+					<img src="images/big/Sprints big.png" alt="Sprints" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A sprint is a defined, concentrated phase within agile project management, where a team works on a specific set of tasks and goals, usually lasting two to four weeks. By embracing sprints, teams can iteratively advance their projects, deliver incremental value, and obtain consistent input, fostering adaptability and streamlined project results.</p>
+				</div>
+
+				<div class="jot-app-popup xs:p-[56px] p-[20px] lg:w-[1096px] w-full max-h-[916px] h-full lg:overflow-y-hidden overflow-y-scroll shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--7"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(7)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Staff</h2>
+					<img src="images/big/Staff big.png" alt="Staff" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">Here, you have the power to oversee and fine-tune your team's dynamics. Effortlessly edit workdays, adjust daily working hours, set default capacities, and gain insights into the team's latest activities. Your centralized control center for optimizing collaboration and productivity.</p>
+				</div>
+
+				<button 
+					class="jot-app-button mx-auto mt-[50px] w-[250px] h-[50px] shadow-newButtonShadow rounded-[15px] flex justify-center items-center font-baseFont font-semibold text-[22px] text-primaryColor hover:bg-primaryColor hover:text-white hover:shadow-none transition-all duration-300"
+					onclick="seeMoreJotAppOpen()"
+				>
+					See more
+				</button>
+				<!-- <a
+						href="#"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+					>
+						<span>See more</span>
+					</a> -->
+			</article>
+			<!-- Our customers BLOCK -->
+			<article class="mt-[150px] pb-5 xs:mx-[20px] mx-4">
+				<h2
+					class="font-baseFont text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-[40px] xxs:text-[35px] text-[24px] font-bold text-center mb-[30px]"
+				>
+					Our customers
+				</h2>
+
+				<div class="our_customers">
+					<div class="grid sm:grid-cols-2 gap-[24px]">
+						<div class="card h-full shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
+							</div>
+							<div class="flex-1">
+								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
+								<p class="mt-[20px] font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque excepturi inventore quaerat accusantium. Dolorem cum repudiandae ex veniam expedita laboriosam dolores quaerat. Porro quod eaque quidem ad nemo odit obcaecati.</p>
+							</div>
+						</div>
+						<div class="card h-full  shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
+							</div>
+							<div class="flex-1">
+								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
+								<p class="mt-[20px] font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et officia architecto dignissimos officiis, dolorem provident molestias tempore. In aspernatur suscipit, dicta quis tempore odio maxime.</p>
+							</div>
+						</div>
+						<div class="card h-full shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
+							</div>
+							<div class="flex-1">
+								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
+								<p class="mt-[20px] font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, atque maxime ea modi qui omnis.</p>
+							</div>
+						</div>
+						<div class="card h-full shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
+							</div>
+							<div class="flex-1">
+								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
+								<p class="mt-[20px] font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odit maiores quam eum officiis libero inventore, dolorem ad nam a.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<!-- Footer BLOCK -->
+			<footer
+				class="absolute font-medium bg-[#ECF0F3] left-0 right-0 mt-[150px] justify-between items-center dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px]"
+			>
+				<div class="content relative flex sm:flex-row flex-col gap-[20px] justify-between mx-auto w-full max-w-[1100px] py-[32px]">
+					<div class="leftside flex flex-col justify-center gap-[30px]">
+						<div class="flex justify-center">
+							<img
+							src="images/Logo footer (1).svg"
+							alt="logo"
+							class="lg:max-w-[200px] md:max-w-[185px] sm:max-w-[130px] max-w-[100px] w-full"
+						/>
+						</div>
+					</div>
+					<div class="rightside 2xl:mr-0 sm:mr-[100px] flex flex-row sm:justify-start justify-center mdlg:gap-x-[100px] gap-x-[50px] gap-y-[32px]">
+						<div class="menu sm:block hidden">
+							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Menu</h3>
+							<ul
+							class="flex flex-col gap-[10px] dark:text-darkSecondaryColor font-medium text-[14px]"
+							>
+								<li class="flex items-center transition duration-200">
+									<a
+										href="index.html"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>About us</a
+									>
+								<li class="flex items-center text-s transition duration-200">
+									<a
+										href="support.html"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>Support</a
+									>
+								</li>
+								<li class="flex items-center text-s transition duration-200">
+									<a
+										href="contacts.html"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>Contacts</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="contacts">
+							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Contacts</h3>
+							<ul class="contact flex flex-col gap-[10px] text-[14px]">
+								<li class="phone flex gap-[17px]">
+									<img src="images/phone.svg" alt="phone" class="inline-block">
+									<p>+441615540257</p>
+								</li>
+								<li class="phone flex gap-[17px]">
+									<img src="images/phone.svg" alt="phone" class="inline-block">
+									<p>+13235405866</p>
+								</li>
+								<li class="email flex gap-[17px]">
+									<img src="images/email.svg" alt="email" class="inline-block">
+									<p class="underline">Info@jot-solutions.com</p>
+								</li>
+							</ul>
+							<div class="social mt-[22px] flex gap-[10px]">
+								<a href="#">
+									<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
+								</a>
+								<a href="#">
+									<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
+								</a>
+								<a href="#">
+									<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="absolute bottom-[85px] 2xl:right-[140px] right-[80px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
+						style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="goUp()"
+					>
+						<img src="images/arrow-up.svg" alt="up">
+					</div>
+				<hr class="border-primaryColor border-[1px]">
+				<p class="text-[12px] font-medium text-center p-[17px]">
+					Copyright ©2023 by J.O.T Solutions
+				</p>
+			</footer>
+		</div>
+		<!-- Swiper JS connection -->
+		<script src="js/swiper-bundle.min.js"></script>
+		<!-- Font awasome -->
+		<script
+			src="https://kit.fontawesome.com/7e4f58e3c2.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- JS Script -->
+		<script src="js/script.js"></script>
+	</body>
+</html>
