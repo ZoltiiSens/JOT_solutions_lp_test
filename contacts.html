@@ -194,18 +194,18 @@
 			</div>
 		</nav>
 		<!-- Mobile Navigation bar BLOCK -->
-		<nav class="fixed py-[10px] px-[16px] xxs:h-[75px] h-[55px] w-full md:hidden flex justify-center rounded-b-[20px] z-[9998]"
-		style="backdrop-filter: saturate(100%) blur(5px)"
+		<nav class="fixed py-[10px] px-[16px] xxs:h-[75px] h-[55px] w-full md:hidden flex justify-end rounded-b-[20px] z-[9998]"
+			style="backdrop-filter: saturate(100%) blur(5px)"
 		>
-		<div class="burger-menu absolute top-1/2 -translate-y-1/2 left-[16px] bg-backgroundColor xxs:w-[45px] w-[35px] xxs:h-[45px] h-[35px] flex items-center justify-center rounded-[10px] shadow-newButtonShadowSmallest z-[9999]"
-			onclick="openMenu()"
-		>
-			<img src="images/burger.svg" alt="" class="xxs:w-[25px]">
-		</div>
+			<div class="burger-menu absolute top-1/2 -translate-y-1/2 left-[16px] bg-backgroundColor xxs:w-[45px] w-[35px] xxs:h-[45px] h-[35px] flex items-center justify-center rounded-[10px] shadow-newButtonShadowSmallest z-[9999]"
+				onclick="openMenu()"
+			>
+				<img src="images/burger.svg" alt="" class="xxs:w-[25px]">
+			</div>
 
-		<div class="logo flex items-center z-[9993]">
-			<img src="images/mobile header logo.svg" alt="" class="xxs:w-[75px]">
-		</div>
+			<div class="logo flex items-center z-[9993] mr-[10px]">
+				<img src="images/mobile header logo.svg" alt="" class="xxs:w-[75px]">
+			</div>
 
 		</nav>
 		<!-- Mobile navigation bar BLOCK -->
@@ -218,7 +218,7 @@
 				<li><a href="support.html">Support</a></li>
 				<li><a href="contacts.html" class="font-bold text-primaryColor">Contacts</a></li>
 			</ul>
-			<div>
+			<div class="flex flex-col gap-[10px]">
 				<a
 					href="#"
 					class="mb-[15px] font-baseFont py-2 w-[130px] h-[35px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[18px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
@@ -264,7 +264,7 @@
 			
 			<!-- JOT APP info BLOCK -->
 			<article 
-				class="relative py-5 lg:mt-[150px] mt-[60px] md:mx-[60px] mx-4 gap-x-[84px] mb-none"
+				class="relative py-5 xl:mt-[150px] md:mt-[60px] mt-[40px] md:mx-[60px] mx-4 gap-x-[84px] mb-none"
 			>
 				<div class="xl:grid xl:grid-cols-5 xl:gap-x-[110px] flex flex-wrap lg:flex-row flex-col lg:gap-y-[70px] gap-y-[40px]">
 					
@@ -313,19 +313,19 @@
 						</div>
 					</div>
 					
-					<form action="#" id="contact_form" class="lg:mt-0 mt-[40px] col-span-3 row-span-3 h-full min-h-[888px] rounded-[15px] shadow-newButtonShadow sm:pt-[26px] pt-4 sm:px-[40px] px-4 pb-[55px] flex-1">
+					<form action="#" id="contact_form" class="lg:mt-0 mt-[40px] col-span-3 row-span-3 h-full xl:min-h-[888px] rounded-[15px] shadow-newButtonShadow sm:pt-[26px] pt-4 sm:px-[40px] px-4 lg:pb-[55px] pb-[30px] flex-1">
 						<h2 class="md:text-[48px] xxs:text-[38px] text-[2em] font-bold font-baseFont text-primaryColor xxs:mb-[50px] mb-[20px]">
 							Get in touch with us using the form
 						</h2>
-						<input name="name" type="text" placeholder="Your name" class="font-medium text-[18px] xxs:px-[24px] px-[18px] xxs:py-[18px] py-[14px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
-						<input name="email" type="email" placeholder="Your name" class="font-medium text-[18px] px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
-						<textarea name="message" id="contact-form-message" placeholder="Write a message" class="placeholder:font-medium font-medium font-latoFont text-[18px] placeholder:text-secondaryColor px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px] h-[330px] focus:outline-none"
+						<input name="name" type="text" placeholder="Your name" class="font-medium text-[18px] xxs:px-[24px] px-[18px] xxs:py-[18px] py-[14px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full xl:mb-[50px] mb-[20px]">
+						<input name="email" type="email" placeholder="Your name" class="font-medium text-[18px] px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full xl:mb-[50px] mb-[20px]">
+						<textarea name="message" id="contact-form-message" placeholder="Write a message" class="placeholder:font-medium font-medium font-latoFont text-[18px] placeholder:text-secondaryColor px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full xl:mb-[50px] mb-[20px] h-[330px] focus:outline-none"
 							style="resize: none;"
 						></textarea>
 						<button
 							type="submit"
 							href="#"
-							class="md:mx-0 mx-auto font-baseFont py-2 w-[250px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+							class="md:mx-0 ml-auto font-baseFont py-2 xl:w-[250px] sm:w-[200px] w-[150px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
 							>
 							Send
 						</button>
@@ -338,19 +338,18 @@
 			<footer
 				class="absolute font-medium bg-[#ECF0F3] left-0 right-0 mt-[150px] justify-between items-center dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px]"
 			>
-				
-				<div class="content relative flex sm:flex-row flex-col-reverse gap-[20px] justify-between mx-auto w-full max-w-[1100px] py-[61px]">
+				<div class="content relative flex sm:flex-row flex-col gap-[20px] justify-between mx-auto w-full max-w-[1100px] py-[32px]">
 					<div class="leftside flex flex-col justify-center gap-[30px]">
 						<div class="flex justify-center">
 							<img
 							src="images/Logo footer (1).svg"
 							alt="logo"
-							class="max-w-[150px] w-full"
+							class="lg:max-w-[200px] md:max-w-[185px] sm:max-w-[130px] max-w-[100px] w-full"
 						/>
 						</div>
 					</div>
-					<div class="rightside flex xxs:flex-row flex-col mdlg:gap-x-[100px] sm:gap-x-[50px] gap-x-[100px] gap-y-[20px]">
-						<div class="menu">
+					<div class="rightside 2xl:mr-0 sm:mr-[100px] flex flex-row sm:justify-start justify-center mdlg:gap-x-[100px] gap-x-[50px] gap-y-[32px]">
+						<div class="menu sm:block hidden">
 							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Menu</h3>
 							<ul
 							class="flex flex-col gap-[10px] dark:text-darkSecondaryColor font-medium text-[14px]"
@@ -408,7 +407,7 @@
 					</div>
 					
 				</div>
-				<div class="absolute xl:bottom-[100px] sm:bottom-[280px] bottom-[420px] 2xl:right-[180px] xl:right-[100px]  right-[20px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
+				<div class="absolute bottom-[85px] 2xl:right-[140px] right-[80px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
 						style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
 						"
 						onclick="goUp()"

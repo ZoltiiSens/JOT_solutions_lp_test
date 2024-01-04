@@ -101,7 +101,8 @@ function closeMobileSubMenu() {
 // Function opens more blocks in JOT APP block
 let jotAppClosedHeight, jotAppOpenedHeight;
 const cardHeight = document.querySelector('.jot-app-wrapper').querySelector('.card').offsetHeight;
- if (document.documentElement.clientWidth > 1024){
+console.log(document.documentElement.clientWidth);
+ if (document.documentElement.clientWidth >= 1024){
 	jotAppClosedHeight = cardHeight * 2 + 24 * 2 + 'px';
 	jotAppOpenedHeight = cardHeight * 4 + 24 * 4 + 'px';
 }
